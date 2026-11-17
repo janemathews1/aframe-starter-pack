@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-       <a-sky src="Assets/UnderTheSea.jpg"></a-sky>
-  <a-assets>
-    <a-asset-item id="Candycane" src="Assets/Obj_ChristmasCandyCane.obj"></a-asset-item>
-  </a-assets>
-  <a-obj-model src="#Candycane" position="5 -7 5" scale=".1 .1 .1" material="color: #EF2D5E"></a-obj-model>
+      <a-assets>
+        <img id="sea" src="Assets/UnderTheSea.jpg">
+        <a-asset-item id="Fish1" src="Assets/Fish1.obj"></a-asset-item>
+      </a-assets>
+
+      <a-sky src="#sea"></a-sky>
+       
+
+      <a-obj-model src="#Fish1" position="0 1.5 -3" scale="1000 1000 1000" material="color: green"></a-obj-model>
     </a-scene>
   </body>
 </html>
